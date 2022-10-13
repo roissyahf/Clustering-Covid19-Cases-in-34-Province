@@ -27,25 +27,35 @@ We use python packages like Pandas, NumPy, Seaborn, Matplotlib, Plotly, and Scik
 
 # Exploratory Data Analysis
 * What are 5 Province with the highest New Active Cases and 5 Provinces with the lowest New Active Cases?
+![EDA-1](https://user-images.githubusercontent.com/94748266/195549461-a4f5ac0d-d368-4e74-88f5-8e00d331dea1.png)
+
 Jawa Tengah, DKI Jakarta, Jawa Barat, Banten, and Jawa Timur are 5 provinces with the highest New Active Cases. Meanwhile Maluku Utara, Kalimantan Barat, Sulawesi Barat, Papua Barat, and Gorontalo are 5 province with the lowest New Active Cases.
 * Show top 5 Province with the highest Case Fatality Rate and 5 Province with the lowest Case Fatality Rate?
+![EDA-2](https://user-images.githubusercontent.com/94748266/195549572-a69ba72b-7686-4dda-bd5a-e0dbae8852d1.png)
+
 Province with the highest Case Fatality Rate are Jawa Tengah, Jawa Timur, Bengkulu, Sumatera Selatan, and Nusa Tenggara Barat. While, province with the lowest Case Fatality Rate are Kalimantan Utara, Kalimantan Barat, Nusa Tenggara Timur, Papua, and Kepulauan Bangka Belitung.
 * What are top 5 Province with the lowest New Recovered?
+![EDA-3](https://user-images.githubusercontent.com/94748266/195549635-0fc86c7d-c093-4241-91f6-7f1f4bad7bc9.png)
+
 The conclusion obtained after sorting Province by lowest New Recovered is the number of New Recovered are higher than the number of New Death, even though the number of New Active Cases inreased.
 
 
 # Data Manipulation
-We decide to only use 'Province', 'New Deaths', 'New Recovered', 'New Active Cases', 'Case Fatality Rate', 'Case Recovered Rate' for modeling, thus we grouped clean data set by 'Province'.
-After that, we aggregate 'New Deaths', 'New Recovered', 'New Active Cases', 'Case Fatality Rate', 'Case Recovered Rate' by its median, then we divide 'New Deaths', 'New Recovered', 'New Active Cases' with its Population to reduce variance.
+We decide to only use 'Province', 'New Deaths', 'New Recovered', 'New Active Cases', 'Case Fatality Rate', 'Case Recovered Rate' for exploration, thus we grouped clean data set by 'Province'.
+After that, we aggregate 'New Deaths', 'New Recovered', 'New Active Cases', 'Case Fatality Rate', 'Case Recovered Rate' by its median, then we divide 'New Deaths', 'New Recovered', 'New Active Cases' with its Population to reduce variance (in purpose of modeling). So, we only use 3 variables for modeling.
 
 # Modeling
 We use KMeans Clustering, firstly we need to standarize features used, then fit and predict the scaled features.
 
 # Evaluation
-In this mini project, we use KElbowVisualizer to decide the optimal number of k, the answer is 4. After clusters formed, we calculate Silhouette Score and Davies Bouldin Score. We obtained these result using k=4:
-| Silhouette Score | 0.601 |
-| --- | --- |
-| Davies Bouldin Score | 0.441 |
+In this mini project, we use KElbowVisualizer to decide the optimal number of k, the answer is 4. 
+![Elbow](https://user-images.githubusercontent.com/94748266/195551241-a3966de1-59d0-459d-ad4e-caaa450def32.png)
+
+Cluster plot
+
+![Cluster](https://user-images.githubusercontent.com/94748266/195551901-fd356208-7049-49b8-9c6d-24cca1a0e3c1.png)
+
+After clusters formed, we calculate Silhouette Score and Davies Bouldin Score. We obtained these result using k=4: Silhouette Score=0.601 and Davies Bouldin Score=0.441
 
 # Interpretation
 We draw boxplot, and independent line chart to see the order of each cluster (Cluster 0, 1, 2, 3) in each variable ('New Deaths', 'New Recovered', 'New Active Cases'). Here's the result:
