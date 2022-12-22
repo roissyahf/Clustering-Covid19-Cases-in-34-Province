@@ -75,4 +75,4 @@ Here is the list priority of Province according to formed clusters (the amount o
 * Zone D, consist of Bali, Daerah Istimewa Yogyakarta, Gorontalo, Jawa Tengah, Jawa Timur, Kalimantan Selatan, Kalimantan Timur, Kepulauan Riau, Papua Barat, Riau, Sulawesi Utara, Sumatera Barat.
 
 ### Additional Work
-Visit this [link](https://public.tableau.com/app/profile/roissyahfernanda/viz/ClusteringCovid-192020CasesinIndonesiasProvince/Dashboard) to view Dashboard "Clustering Covid-19 2020 Cases in Indonesia's Province"
+Visit this [link](https://public.tableau.com/views/ClusteringCovid-192020CasesinIndonesiasProvince/improveddashboard?:language=en-US&:display_count=n&:origin=viz_share_link) to view Dashboard "Clustering Covid-19 2020 Cases in Indonesia's Province"
