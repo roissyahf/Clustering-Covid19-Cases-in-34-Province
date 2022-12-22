@@ -1,15 +1,15 @@
 # Clustering Covid-19 2020 Cases in Indonesia
-We aim to clustering 34 Province in Indonesia according to the Covid-19 2020 Cases using historical data set.
+We aim to clustering 34 Province in Indonesia according to the number of Covid-19 2020 Cases using historical data set.
 Our main goal of pushing this mini project is to showcase our learning progress also we hope to get feedback, advice, or critics from public.
 
 # Problem Understanding
-Clustering province based on the Monthly Covid-19 Cases will help the Indonesia central government to prioritize the funding of Covid-19.
+Clustering province based on the Monthly Covid-19 Cases will help the Indonesia central government to prioritize the Covid-19 response fund.
 
 # Data Understanding
 - Data of Indonesia's Covid-19 2020 from 31 March 2020 to 31 December 2020.
 - We obtained this data set from our mentor in ISE! Data Science Academy 2022 held by ITS. We can also obtained the data set from Kaggle independently.
 - The data set has 37 columns and 9959 rows.
-- There's no data dictionary available, however we can grouped each variable in 4 section:
+- There's no data dictionary available, however we can grouped each variable into 4 section:
 
 | **Section** | **Variables** |
 | --- | --- |
@@ -58,7 +58,7 @@ Cluster plot
 After clusters formed, we calculate Silhouette Score and Davies Bouldin Score. We obtained these result using k=4: Silhouette Score=0.601 and Davies Bouldin Score=0.441
 
 # Interpretation
-We draw boxplot, and independent line chart to see the order of each cluster (Cluster 0, 1, 2, 3) in each variable ('New Deaths', 'New Recovered', 'New Active Cases'). Here's the result:
+We draw boxplot to see the order of each cluster (Cluster 0, 1, 2, 3) in each variable ('New Deaths', 'New Recovered', 'New Active Cases'). Here's the result:
 
 | **Cluster** | **Member** | **Characteristic** | **Zone** |
 | --- | --- | --- | --- |
@@ -68,11 +68,11 @@ We draw boxplot, and independent line chart to see the order of each cluster (Cl
 | **3** | Consist of 12 Provinces: Bali, Daerah Istimewa Yogyakarta, Gorontalo, Jawa Tengah, Jawa Timur, Kalimantan Selatan, Kalimantan Timur, Kepulauan Riau, Papua Barat, Riau, Sulawesi Utara, Sumatera Barat | New Active Cases of this cluster is in the third position, meanwhile New Recovered, and New Deaths are the second highest | It belongs to "Zone D" (comprises of provinces with the least active Covid-19 transmission) |
 
 # Recommendation
-Here is the priority of Province according to formed clusters (the amount of funding given should be considered according to its zone):
+Here is the list priority of Province according to formed clusters (the amount of Covid-19 response fund given should be considered according to its zone):
 * Zone A, consist of DKI Jakarta
 * Zone B, consist of Kalimantan Tengah, Kalimantan Utara, Papua
 * Zone C, consist of Aceh, Banten, Bengkulu, Jambi, Jawa Barat, Kalimantan Barat, Kepulauan Bangka Belitung, Lampung, Maluku, Maluku Utara, Nusa Tenggara Barat, Nusa Tenggara Timur, Sulawesi Barat, Sulawesi Tengah, Sulawesi Selatan, Sulawesi Tenggara, Sumatera Selatan, Sumatera Utara
 * Zone D, consist of Bali, Daerah Istimewa Yogyakarta, Gorontalo, Jawa Tengah, Jawa Timur, Kalimantan Selatan, Kalimantan Timur, Kepulauan Riau, Papua Barat, Riau, Sulawesi Utara, Sumatera Barat.
 
 ### Additional Work
-Visit this [link](https://public.tableau.com/app/profile/roissyahfernanda/viz/ClusteringCovid-192020CasesinIndonesiasProvince/Dashboard) to view Dashboard Covid-19 2020 Cases in Indonesia's Province
+Visit this [link](https://public.tableau.com/app/profile/roissyahfernanda/viz/ClusteringCovid-192020CasesinIndonesiasProvince/Dashboard) to view Dashboard "Clustering Covid-19 2020 Cases in Indonesia's Province"
